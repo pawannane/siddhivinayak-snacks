@@ -8,13 +8,87 @@
    v2.0 | 20110126
    License: none (public domain)
    ========================================================================== */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
-ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
-figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,22 +98,35 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /* Align radios and text inputs with their label */
 
-input[type='radio'] { vertical-align: text-bottom; }
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
 
 /* Hand cursor on clickable input elements */
 label,
-input[type='button'],
-input[type='submit'],
+input[type="button"],
+input[type="submit"],
 button {
   cursor: pointer;
 }
@@ -50,7 +137,9 @@ strong {
   font-size: inherit;
 }
 
-em { font-style: italic; }
+em {
+  font-style: italic;
+}
 
 img {
   width: 100%;
@@ -66,8 +155,12 @@ sup {
   line-height: 0;
 }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -0.7em;
+}
+sub {
+  bottom: -0.25em;
+}
 
 /* 1.2. Clear Fix
    ========================== */
@@ -78,8 +171,12 @@ sub { bottom: -.25em; }
   content: " ";
 }
 
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
 
 /*for all*/
 body {
@@ -87,9 +184,9 @@ body {
   font-family: sans-serif;
 }
 
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 li {
@@ -100,32 +197,123 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 86%;
   margin: 0 auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-orange: #ff8e44;
+  --secondary-orange: #ff9046;
+  --pure-white: #fff;
+  --primary-gray: #898989;
+  --secondary-gray: #e0e0e0;
+  --pure-black: #000;
 }
 /*=================================
   Header styling starts here
 =================================*/
+.header {
+  padding: 22px 0;
+  background-color: var(--pure-white);
+}
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.logo img {
+  width: 100px;
+}
 
+.navbar > ul {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
 
+.navbar a {
+  position: relative;
+  color: var(--primary-gray);
+  transition: all 0.3s ease;
+  text-align: center;
+}
 
+.navbar a::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid transparent;
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+}
 
+.kitchen::before {
+  content: "\e51a";
+}
+
+.specialities::before {
+  content: "\f2e7";
+}
+
+.blog::before {
+  content: "\f303";
+}
+
+.contact::before {
+  content: "\f2b9";
+}
+
+.navbar a::before {
+  margin-bottom: 20px;
+  display: block;
+  font-family: "FontAwesome";
+}
+
+.call-btn {
+  padding: 14px 1.5rem;
+  border: 2px solid var(--primary-orange);
+  border-radius: 25px;
+  background-color: var(--primary-orange);
+  color: var(--pure-white);
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px 0.5%;
+  display: block;
+  background-color: var(--secondary-font);
+  text-indent: -9999px;
+  transition: all 0.3s ease;
+}
+
+.html-scroll {
+  overflow-y: hidden;
+}
 /*=================================
   Header styling ends here
-=================================*/  
+=================================*/
 
 /*=================================
   main styling starts here
 =================================*/
-
-
-
-
-
-
-
 
 /*=================================
   main styling ends here
@@ -133,22 +321,30 @@ li {
 
 /*=================================
   footer styling starts here
-=================================*/ 
+=================================*/
 
-
-
-
-
-
-
- /*=================================
+/*=================================
   footer styling ends here
-=================================*/ 
+=================================*/
 
 /*media query starts*/
+/*media query for hover starts here*/
+@media (width >= 995px) {
+  .navbar a:hover {
+    color: var(--primary-orange);
+  }
+
+  .navbar a:hover::after {
+    transform: scaleX(1);
+    border-color: var(--primary-orange);
+  }
+
+  .call-btn:hover {
+    background-color: var(--pure-white);
+    color: var(--primary-orange);
+  }
+}
+
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
-
-
-
-}  
+}
