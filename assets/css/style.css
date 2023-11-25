@@ -315,6 +315,42 @@ li {
   main styling starts here
 =================================*/
 
+/******************************************
+  banner styling starts here
+*******************************************/
+.banner-section {
+  position: relative;
+}
+
+.food-img > img {
+  height: 90vh;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.banner-container {
+  position: absolute;
+  z-index: 1;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading {
+  color: var(--pure-white);
+  font-size: 3.75rem;
+}
+
+.info {
+  margin-top: 25px;
+  color: var(--pure-white);
+  font-size: 1rem;
+}
+/******************************************
+  banner styling ends here
+*******************************************/
+
 /*=================================
   main styling ends here
 =================================*/
