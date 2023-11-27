@@ -221,6 +221,7 @@ li {
 .header {
   padding: 22px 0;
   background-color: var(--pure-white);
+  box-shadow: 0 8px 8px var(--pure-black);
 }
 
 .header-container {
@@ -229,6 +230,7 @@ li {
   justify-content: space-between;
 }
 
+.logo { width: 12%; }
 .logo img { width: 100px; }
 .transition-ease { transition: all 0.3s ease-in-out; }
 
@@ -250,7 +252,7 @@ li {
   height: 100%;
   border-bottom: 2px solid transparent;
   position: absolute;
-  bottom: -28px;
+  bottom: 0;
   left: 0;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
