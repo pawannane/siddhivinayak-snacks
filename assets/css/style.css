@@ -229,9 +229,8 @@ li {
   justify-content: space-between;
 }
 
-.logo img {
-  width: 100px;
-}
+.logo img { width: 100px; }
+.transition-ease { transition: all 0.3s ease-in-out; }
 
 .navbar > ul {
   display: flex;
@@ -242,7 +241,6 @@ li {
 .navbar a {
   position: relative;
   color: var(--primary-gray);
-  transition: all 0.3s ease;
   text-align: center;
 }
 
@@ -254,25 +252,14 @@ li {
   position: absolute;
   bottom: -28px;
   left: 0;
-  transition: transform 0.3s ease;
   transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
 }
 
-.kitchen::before {
-  content: "\e51a";
-}
-
-.specialities::before {
-  content: "\f2e7";
-}
-
-.blog::before {
-  content: "\f303";
-}
-
-.contact::before {
-  content: "\f2b9";
-}
+.kitchen::before { content: "\e51a"; }
+.specialities::before { content: "\f2e7"; }
+.blog::before { content: "\f303"; }
+.contact::before { content: "\f2b9"; }
 
 .navbar a::before {
   margin-bottom: 20px;
@@ -286,7 +273,13 @@ li {
   border-radius: 25px;
   background-color: var(--primary-orange);
   color: var(--pure-white);
-  transition: all 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.call-btn::before {
+  content: "\f095";
+  margin-right: 9px;
+  font-family: "FontAwesome";
 }
 
 .hamburger {
@@ -301,12 +294,9 @@ li {
   display: block;
   background-color: var(--secondary-font);
   text-indent: -9999px;
-  transition: all 0.3s ease;
 }
 
-.html-scroll {
-  overflow-y: hidden;
-}
+.html-scroll { overflow-y: hidden; }
 /*=================================
   Header styling ends here
 =================================*/
@@ -318,9 +308,7 @@ li {
 /******************************************
   banner styling starts here
 *******************************************/
-.banner-section {
-  position: relative;
-}
+.banner-section { position: relative; }
 
 .food-img > img {
   height: 90vh;
@@ -366,9 +354,7 @@ li {
 /*media query starts*/
 /*media query for hover starts here*/
 @media (width >= 995px) {
-  .navbar a:hover {
-    color: var(--primary-orange);
-  }
+  .navbar a:hover { color: var(--primary-orange); }
 
   .navbar a:hover::after {
     transform: scaleX(1);
