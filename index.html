@@ -23,13 +23,241 @@
   <!--container start-->
   <div class="container">
     <!--header section start-->
-    <header>
-
+    <header class="header">
+      <div class="wrapper">
+        <div class="header-container">
+          <h1 class="logo">
+            <a href="#" title="Home">
+              <img src="./assets/images/logo.png" alt="Logo">
+            </a>
+          </h1>
+          <nav class="navbar">
+            <ul>
+              <li><a href="#kitchen" class="kitchen transition-ease" title="Kitchen">Kitchen</a></li>
+              <li><a href="#specialities" class="specialities transition-ease" title="Specialities">Specialities</a>
+              </li>
+              <li><a href="#blog" class="blog transition-ease" title="Blog">Blog</a></li>
+              <li><a href="#contact" class="contact transition-ease" title="Contact">Contact</a></li>
+            </ul>
+          </nav>
+          <a href="tel:+919876543210" class="call-btn transition-ease" title="Call us">+91 9876543210</a>
+          <ul class="hamburger">
+            <li class="bar transition-ease">bar</li>
+            <li class="bar transition-ease">bar</li>
+            <li class="bar transition-ease">bar</li>
+          </ul>
+        </div>
+      </div>
     </header>
     <!--header section start-->
     <!--main section start-->
     <main>
+      <!--banner section start-->
+      <section class="banner-section" id="kitchen">
+        <figure class="food-img">
+          <img src="./assets/images/hakka-noddles.jpeg" alt="Banner image">
+        </figure>
+        <div class="banner-container">
+          <h2 class="heading">Taste the Extraordinary</h2>
+          <p class="info">Where Palate Meets Passion</p>
+        </div>
+      </section>
+      <!--banner section end-->
+
+      <!-- Our Specialities section start -->
+      <section class="our-specialities">
+        <div class="wrapper">
+          <h3 class="sub-heading">Our Specialities</h3>
+          <div class="foods-main-container">
+            <ul class="filter-list">
+              <li class="active-data">
+                <a class="active-filter transition-ease" href="#FIXME" title="All Foods" data-food="all">All
+                  Foods</a>
+              </li>
+              <li>
+                <a class="transition-ease" href="#FIXME" title="Chinese" data-food="Chinese">Chinese</a>
+              </li>
+              <li>
+                <a class="transition-ease" href="#FIXME" title="South Indian" data-food="South Indian">South Indian</a>
+              </li>
+              <li>
+                <a class="transition-ease" href="#FIXME" title="Shawarma" data-food="Shawarma">Shawarma</a>
+              </li>
+            </ul>
+
+            <ul class="images-list">
+              <li data-food-type="chinese">
+                <figure>
+                  <img src="./assets/images/fried-rice.jpg" alt="Chinese">
+                </figure>
+                <span>Chinese fried rice</span>
+              </li>
+              <li data-food-type="shawarma">
+                <figure>
+                  <img src="./assets/images/firangi-shawarma.jpg" alt="Shawarma">
+                </figure>
+                <span>Chicken firangi shawarma</span>
+              </li>
+              <li data-food-type="south">
+                <figure>
+                  <img src="./assets/images/idli-dosa.jpg" alt="South Indian">
+                </figure>
+                <span>Idli & Dosa</span>
+              </li>
+              <li data-food-type="chinese">
+                <figure>
+                  <img src="./assets/images/hakka-noodles.jpg" alt="Chinese">
+                </figure>
+                <span>Chinese hakka noodle</span>
+              </li>
+              <li data-food-type="shawarma">
+                <figure>
+                  <img src="./assets/images/bbq-shawarma.jpg" alt="shawarma">
+                </figure>
+                <span>Chicken BBQ shawarma</span>
+              </li>
+              <li data-food-type="chinese">
+                <figure>
+                  <img src="./assets/images/1000-rice.jpg" alt="Chinese">
+                </figure>
+                <span>1000 rice</span>
+              </li>
+              <li data-food-type="shawarma">
+                <figure>
+                  <img src="./assets/images/peri-shawarma.jpg" alt="Shawarma">
+                </figure>
+                <span>Chicken peri peri shawarma</span>
+              </li>
+              <li data-food-type="south">
+                <figure>
+                  <img src="./assets/images/medu-wada.jpg" alt="South Indian">
+                </figure>
+                <span>Medu wada sambhar</span>
+              </li>
+              <li data-food-type="south">
+                <figure>
+                  <img src="./assets/images/upma.jpg" alt="South Indian">
+                </figure>
+                <span>Upma</span>
+              </li>
+              <li data-food-type="chinese">
+                <figure>
+                  <img src="./assets/images/manchuriyan-chilly.jpg" alt="Chinese">
+                </figure>
+                <span>Manchuriyan chilly</span>
+              </li>
+              <li data-food-type="south">
+                <figure>
+                  <img src="./assets/images/poha.jpg" alt="South Indian">
+                </figure>
+                <span>Poha</span>
+              </li>
+              <li data-food-type="shawarma">
+                <figure>
+                  <img src="./assets/images/shawarma.jpg" alt="Shawarma">
+                </figure>
+                <span>Chicken shawarma</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- blog section start -->
+      <section class="blog">
+        <h4 class="sub-heading">Blog</h4>
+        <ul class="sliders">
+          <li>
+            <figure>
+              <img src="https://www.dummyimage.com/96x73/000/fff" alt="user-img" title="Hakka Noodles">
+            </figure>
+            <p class="info">
+              The aroma of the noodles, especially when combined with fresh vegetables and aromatic spices like garlic
+              and ginger, can be tantalizing and appetizing.
+            </p>
+          </li>
+          <li>
+            <figure>
+              <img src="https://www.dummyimage.com/96x73/000/fff" alt="user-img" title="Shawarma">
+            </figure>
+            <p class="info">
+              When the outer layers of the shawarma are shaved off the rotating spit, they often develop crispy and
+              caramelized edges, adding a delightful texture and flavor contrast to the tenderness.
+            </p>
+          </li>
+          <li>
+            <figure>
+              <img src="https://www.dummyimage.com/96x73/000/fff" alt="user-img" title="Veg Fried Rice">
+            </figure>
+            <p class="info">
+              Veg fried rice is versatile and can be customized by adding different combinations of vegetables,
+              adjusting the seasoning, or incorporating additional ingredients like tofu or nuts, catering to various
+              taste preferences.
+            </p>
+          </li>
+        </ul>
+        <div class="slider-btns">
+          <ul class="prev-next">
+            <li>
+              <a href="#FIXME" class="prev transition-ease">prev</a>
+            </li>
+            <li>
+              <a href="#FIXME" class="next transition-ease">next</a>
+            </li>
+          </ul>
+          <ul class="test-btns">
+            <li>
+              <a href="#FIXME" class="transition-ease" title="Slide 1">slide</a>
+            </li>
+            <li>
+              <a href="#FIXME" class="transition-ease" title="Slide 2">slide</a>
+            </li>
+            <li>
+              <a href="#FIXME" class="transition-ease" title="Slide 3">slide</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- blog section end -->
     </main>
+    <!--main section end-->
+
+    <!--footer section start-->
+    <footer>
+      <div class="wrapper">
+        <h6>
+          <a href="/index.html" title="Siddhivinayak Snacks" class="transition-ease">
+            Siddhivinayak Snacks
+          </a>
+        </h6>
+        <ul class="menu">
+          <li>
+            <h5 class="sub-heading">Menu</h5>
+          </li>
+          <li class="menu-items">
+            <a href="#FIXME" class="transition-ease info" title="Chinese" target="_self">Chinese</a>
+          </li>
+          <li class="menu-items">
+            <a href="#FIXME" class="transition-ease info" title="South Indian" target="_self">South Indian</a>
+          </li>
+          <li class="menu-items">
+            <a href="#FIXME" class="transition-ease info" title="Staple Snacks" target="_self">Staple Snacks</a>
+          </li>
+        </ul>
+        <ul class="social">
+          <li>
+            <h5 class="sub-heading">Social Media</h5>
+          </li>
+          <li>
+            <a href="https://wa.me/8291226604" class="transition-ease info" title="WhatsApp Us" target="_blank">WhatsApp
+              Us</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" class="transition-ease info" title="Our Instagram" target="_blank">Our
+              Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     <!--footer section end-->
 
   </div>
