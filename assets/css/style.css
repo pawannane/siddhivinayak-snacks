@@ -1,4 +1,4 @@
-@charset "utf-8";
+  @charset "utf-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -115,6 +115,8 @@ section {
 /* Force scrollbar */
 html {
   overflow-y: scroll;
+  scroll-behavior: smooth;
+  font-size: 100%;
 }
 
 /* Align radios and text inputs with their label */
@@ -230,9 +232,16 @@ li {
   justify-content: space-between;
 }
 
-.logo { width: 12%; }
+/* .logo { width: 12%; } */
 .logo img { width: 100px; }
 .transition-ease { transition: all 0.3s ease-in-out; }
+
+.navbar {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .navbar > ul {
   display: flex;
@@ -240,13 +249,13 @@ li {
   gap: 3rem;
 }
 
-.navbar a {
+.navbar li a {
   position: relative;
   color: var(--primary-gray);
   text-align: center;
 }
 
-.navbar a::after {
+.navbar li a::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -263,7 +272,7 @@ li {
 .blog::before { content: "\f303"; }
 .contact::before { content: "\f2b9"; }
 
-.navbar a::before {
+.navbar li a::before {
   margin-bottom: 20px;
   display: block;
   font-family: "FontAwesome";
@@ -294,7 +303,7 @@ li {
   height: 3px;
   margin: 5px 0.5%;
   display: block;
-  background-color: var(--secondary-font);
+  background-color: var(--primary-gray);
   text-indent: -9999px;
 }
 
@@ -355,7 +364,7 @@ li {
 
 /*media query starts*/
 /*media query for hover starts here*/
-@media (width >= 995px) {
+@media only screen and (min-width: 995px) {
   .navbar a:hover { color: var(--primary-orange); }
 
   .navbar a:hover::after {
@@ -363,12 +372,57 @@ li {
     border-color: var(--primary-orange);
   }
 
-  .call-btn:hover {
-    background-color: var(--pure-white);
-    color: var(--primary-orange);
-  }
+  .call-btn:hover { background-color: var(--pure-white); }
+}
+
+/*media query for 1280px starts here*/
+@media only screen and (max-width: 1280px) {
+  .navbar { width: 70%; }
 }
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  .navbar { width: 80%; }
+  .navbar > ul { gap: 2rem; }
+}
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  .hamburger { 
+    display: block; 
+    z-index: 2;
+  }
+
+  .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger.active .bar:nth-child(2) { opacity: 0; }
+  .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  .header { padding: 20px 1.5rem; }
+  .header .active-nav { transform: translateY(0); }
+
+  .navbar {
+    width: 100%;
+    height: 100%;
+    padding: 20px 2%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: var(--pure-white);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .navbar > ul {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/*media query for 480px starts here*/
+@media only screen and (max-width: 480px) {
+  html { font-size: 80%; }
+  .banner-container { top: 50%;}
 }
