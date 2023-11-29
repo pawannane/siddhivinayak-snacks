@@ -79,7 +79,7 @@ sub { bottom: -.25em; }
 }
 
 .cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf { zoom: 1; }
 
 /*for all*/
 body {
@@ -103,14 +103,18 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
+
+:root {
+  --primary-orange: #ff8e44;
+  --secondary-orange: #ff9046;
+  --pure-white: #fff;
+  --primary-gray: #898989;
+  --secondary-gray: #e0e0e0;
+  --pure-black: #000;
+}
 /*=================================
   Header styling starts here
 =================================*/
-
-
-
-
-
 
 /*=================================
   Header styling ends here
@@ -120,9 +124,74 @@ li {
   main styling starts here
 =================================*/
 
+/*======================================
+ Our Specialities section styling start
+=======================================*/
 
+.sub-heading {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
 
+.filter-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
 
+.filter-list li a {
+ color: var(--primary-orange);
+ font-weight: 600;
+ font-size: 1.2rem;
+ transition: all .3s ease-in-out;
+}
+
+.foods-main-container { text-align: center; }
+
+.food-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images-list {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.images-list li {
+  margin-top: 4rem;
+  margin-left: 2%;
+  flex: 0 0 23%; 
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.images-list li figure img { border-radius: 20px; }
+
+.images-list li:nth-child(4n + 1) { margin-left: 0;  }
+
+.images-list li span { 
+  font-weight: 600;
+  display: block;
+  margin-top: .6rem;
+}
+
+.images-list li figure,
+.images-list li figure img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  aspect-ratio: 3/2;
+} 
+
+/*======================================
+ Our Specialities section styling end
+=======================================*/
 
 
 
@@ -136,19 +205,44 @@ li {
 =================================*/ 
 
 
-
-
-
-
-
  /*=================================
   footer styling ends here
 =================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
+@media only screen and (min-width: 995px) {
+  .images-list li:hover { scale:.9 ;} 
+
+  .filter-list li a:hover { color: var(--primary-gray); }
+}  
+
 @media only screen and (max-width: 995px) {
+  .images-list li { flex: 0 0 30%; }
 
-
+  .images-list li:nth-child(4n+1) { margin-left: 2%;  }
 
 }  
+
+@media only screen and (max-width: 640px) {
+  .images-list li { flex: 0 0 49%; }
+
+  .images-list li:nth-child(2n+1) { margin-left: 0;  }
+
+} 
+
+@media only screen and (max-width: 560px) {
+  .our-specialities .wrapper { width: 95%; }
+  .images-list li { flex: 0 0 100%; }
+
+  .images-list li:nth-child(1n+1) { margin-left: 0;  }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+  .filter-list li {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+  }
+} 
