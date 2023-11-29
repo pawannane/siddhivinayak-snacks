@@ -179,6 +179,8 @@ sub {
 .cf {
   zoom: 1;
 }
+.cf:after { clear: both; }
+.cf { zoom: 1; }
 
 /*for all*/
 body {
@@ -340,6 +342,74 @@ li {
   color: var(--pure-white);
   font-size: 3.75rem;
 }
+/*======================================
+ Our Specialities section styling start
+=======================================*/
+
+.sub-heading {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.filter-list li a {
+ color: var(--primary-orange);
+ font-weight: 600;
+ font-size: 1.2rem;
+ transition: all .3s ease-in-out;
+}
+
+.foods-main-container { text-align: center; }
+
+.food-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images-list {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.images-list li {
+  margin-top: 4rem;
+  margin-left: 2%;
+  flex: 0 0 23%; 
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.images-list li figure img { border-radius: 20px; }
+
+.images-list li:nth-child(4n + 1) { margin-left: 0;  }
+
+.images-list li span { 
+  font-weight: 600;
+  display: block;
+  margin-top: .6rem;
+}
+
+.images-list li figure,
+.images-list li figure img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  aspect-ratio: 3/2;
+} 
+
+/*======================================
+ Our Specialities section styling end
+=======================================*/
 
 .info {
   margin-top: 25px;
@@ -359,6 +429,9 @@ li {
 =================================*/
 
 /*=================================
+=======
+
+ /*=================================
   footer styling ends here
 =================================*/
 
@@ -381,10 +454,33 @@ li {
 }
 
 /*media query for 995px starts here*/
+@media only screen and (min-width: 995px) {
+  .images-list li:hover { scale:.9 ;} 
+
+  .filter-list li a:hover { color: var(--primary-gray); }
+}  
+
 @media only screen and (max-width: 995px) {
   .navbar { width: 80%; }
   .navbar > ul { gap: 2rem; }
-}
+  .images-list li { flex: 0 0 30%; }
+
+  .images-list li:nth-child(4n+1) { margin-left: 2%;  }
+
+}  
+
+@media only screen and (max-width: 640px) {
+  .images-list li { flex: 0 0 49%; }
+
+  .images-list li:nth-child(2n+1) { margin-left: 0;  }
+
+} 
+
+@media only screen and (max-width: 560px) {
+  .our-specialities .wrapper { width: 95%; }
+  .images-list li { flex: 0 0 100%; }
+
+  .images-list li:nth-child(1n+1) { margin-left: 0;  }
 
 /*media query for 768px starts here*/
 @media only screen and (max-width: 768px) {
@@ -393,7 +489,6 @@ li {
     z-index: 2;
   }
 
-  .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
   .hamburger.active .bar:nth-child(2) { opacity: 0; }
   .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
@@ -426,3 +521,11 @@ li {
   html { font-size: 80%; }
   .banner-container { top: 50%;}
 }
+}
+
+@media only screen and (max-width: 480px) {
+  .filter-list li {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+  }
+} 
