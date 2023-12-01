@@ -231,7 +231,7 @@
     --pure-black: #000;
   }
 
-  /*=================================
+/*=================================
   Header styling starts here
 =================================*/
   .header {
@@ -246,7 +246,6 @@
     justify-content: space-between;
   }
 
-  /* .logo { width: 12%; } */
   .logo img {
     width: 100px;
   }
@@ -341,15 +340,15 @@
     overflow-y: hidden;
   }
 
-  /*=================================
+/*=================================
   Header styling ends here
 =================================*/
 
-  /*=================================
+/*=================================
   main styling starts here
 =================================*/
 
-  /******************************************
+/******************************************
   banner styling starts here
 *******************************************/
   .banner-section {
@@ -555,15 +554,15 @@
     float: right;
   }
 
-  /******************************************
+/******************************************
   blog styling ends here
 *******************************************/
 
-  /*=================================
+/*=================================
   main styling ends here
 =================================*/
 
-  /*=================================
+/*=================================
   footer styling starts here
 =================================*/
   footer {
@@ -576,9 +575,7 @@
 /*=================================
 
  =================================*/
-  footer .sub-heading {
-    color: #fff;
-  }
+  footer .sub-heading { color: #fff; }
 
   footer .wrapper {
     display: flex;
@@ -610,32 +607,30 @@
 
 /*media query for hover starts here*/
 @media only screen and (min-width: 995px) {
-    .navbar a:hover { color: var(--primary-orange); }
+  .navbar a:hover { color: var(--primary-orange); }
 
-    .navbar a:hover::after {
-      transform: scaleX(1);
-      border-color: var(--primary-orange);
-    }
+  .navbar a:hover::after {
+    transform: scaleX(1);
+    border-color: var(--primary-orange);
+  }
 
-    .call-btn:hover { background-color: var(--pure-white); }
+  .call-btn:hover { background-color: var(--pure-white); }
+  .images-list li:hover { scale:.9 ;} 
+  .filter-list li a:hover { color: var(--primary-gray); }
 
-    .images-list li:hover { scale:.9 ;} 
+  footer ul li a:hover { 
+    color: var(--primary-gray);  
+    font-weight: 600;
+  }
 
-    .filter-list li a:hover { color: var(--primary-gray); }
+  .prev:hover::before,
+  .next:hover::before { color: var(--primary-gray); }
+  .call-btn:hover { background-color: var(--pure-white); }
 
-    footer ul li a:hover { 
-      color: var(--primary-gray);  
-      font-weight: 600;
-    }
-
-    .prev:hover::before,
-    .next:hover::before { color: var(--primary-gray); }
-    .call-btn:hover { background-color: var(--pure-white); }
-
-    .test-btns li a:hover::after {
-      background-color: #ff8e44;
-      opacity: 1;
-    }
+  .test-btns li a:hover::after {
+    background-color: #ff8e44;
+    opacity: 1;
+  }
 }
 
 /*media query for 995px starts here*/
@@ -666,7 +661,7 @@
 
   .navbar {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     padding: 20px 2%;
     flex-direction: column;
     justify-content: space-evenly;
@@ -697,7 +692,15 @@
 
 /*media query for 560px starts here*/
 @media only screen and (max-width: 560px) {
+  .logo img { width: 70px; }
+  .navbar li a::before { font-size: 1.5rem; }
   .our-specialities .wrapper { width: 95%; }
+
+  .fixed-header {  
+    width: 100%;
+    position: fixed; 
+    z-index: 2;
+  }
 
 }
 /*media query for 480px starts here*/
@@ -722,4 +725,8 @@
 @media only screen and (max-width: 375px) {
   .images-list li { flex: 0 0 100%; }
   .images-list li:nth-child(1n+1) { margin-left: 0;  }
+}
+
+@media only screen and (max-width: 320px) {
+  .heading { font-size: 2.75rem; }
 }

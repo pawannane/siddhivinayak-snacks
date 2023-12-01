@@ -20,3 +20,20 @@ navLink.forEach(e => {
     html.classList.remove("html-scroll"); // remove prevent scrolling or user can scroll
   })
 });
+
+/************************************ scroll logic ***********************************************/
+var specificPixel = 80;
+
+// Function to be called when the user scrolls to the specific pixel
+function handleScroll() {
+  var scrollPosition = window.scrollY || window.pageYOffset;
+
+  if (scrollPosition >= specificPixel) {
+    header.classList.add("fixed-header");
+  } else {
+    header.classList.remove("fixed-header");
+  }
+}
+
+// Attach the 'handleScroll' function to the 'onscroll' event
+window.onscroll = handleScroll;
