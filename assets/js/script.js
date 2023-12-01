@@ -1,10 +1,10 @@
-const hamburger = document.querySelector(".hamburger");
-const navContainer = document.querySelector(".navbar");
-const navLink = document.querySelectorAll(".navbar a");
-const html = document.querySelector("html");
-const navItems = document.querySelectorAll(".filter-list li");
-const imageItems = document.querySelectorAll(".images-list li");
-const header = document.querySelector(".header");
+const hamburger = document.querySelector(".hamburger"),
+  navContainer = document.querySelector(".navbar"),
+  navLink = document.querySelectorAll(".navbar a"),
+  html = document.querySelector("html"),
+  navItems = document.querySelectorAll(".filter-list li"),
+  imageItems = document.querySelectorAll(".images-list li"),
+  header = document.querySelector(".header");
 
 
 window.addEventListener('load', () => {
@@ -46,32 +46,35 @@ window.addEventListener('load', () => {
   };
 
   filterImage();
+
+
+  //remove active
+  navLink.forEach(e => {
+    e.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navContainer.classList.remove("active-nav");
+      html.classList.remove("html-scroll"); // remove prevent scrolling or user can scroll
+    })
+  });
+
+  /************************************ scroll logic ***********************************************/
+  var specificPixel = 80;
+
+  // Function to be called when the user scrolls to the specific pixel
+  function handleScroll() {
+    var scrollPosition = window.scrollY || window.scrollY;
+
+    if (scrollPosition >= specificPixel) {
+      header.classList.add("fixed-header");
+    } else {
+      header.classList.remove("fixed-header");
+    }
+  }
+
+  // Attach the 'handleScroll' function to the 'onscroll' event
+  window.onscroll = handleScroll;
+
 })
 
 
 
-//remove active
-navLink.forEach(e => {
-  e.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navContainer.classList.remove("active-nav");
-    html.classList.remove("html-scroll"); // remove prevent scrolling or user can scroll
-  })
-});
-
-/************************************ scroll logic ***********************************************/
-var specificPixel = 80;
-
-// Function to be called when the user scrolls to the specific pixel
-function handleScroll() {
-  var scrollPosition = window.scrollY || window.pageYOffset;
-
-  if (scrollPosition >= specificPixel) {
-    header.classList.add("fixed-header");
-  } else {
-    header.classList.remove("fixed-header");
-  }
-}
-
-// Attach the 'handleScroll' function to the 'onscroll' event
-window.onscroll = handleScroll;
