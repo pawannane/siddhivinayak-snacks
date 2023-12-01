@@ -678,6 +678,12 @@
     align-items: center;
     flex-direction: column;
   }
+
+  .fixed-header {  
+    width: 100%;
+    position: fixed; 
+    z-index: 2;
+  }
 }
 
 /*media query for 640px starts here*/
@@ -695,13 +701,6 @@
   .logo img { width: 70px; }
   .navbar li a::before { font-size: 1.5rem; }
   .our-specialities .wrapper { width: 95%; }
-
-  .fixed-header {  
-    width: 100%;
-    position: fixed; 
-    z-index: 2;
-  }
-
 }
 /*media query for 480px starts here*/
 @media only screen and (max-width: 480px) {
