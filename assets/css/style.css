@@ -417,8 +417,8 @@
 
 .images-list li {
   margin-top: 4rem;
-  margin-left: 2%;
-  flex: 0 0 23%; 
+  margin-left: 2%; /* Adjust this margin as needed */
+  flex: 0 0 calc(23% - 1.5%); /* Adjust the width and margin calculation */
   transition: all .3s ease-in-out;
   cursor: pointer;
 }
@@ -643,7 +643,9 @@
   .navbar { width: 70%; }
   .navbar > ul { gap: 1.8rem; }
   .images-list li { flex: 0 0 30%; }
-  .images-list li span { font-size: 1.3rem; }
+  .images-list li span {
+    font-size: 1.1rem;
+}
   .images-list li:nth-child(4n+1) { margin-left: 2%;  }
 }  
 
@@ -654,7 +656,6 @@
     z-index: 2;
   }
 
-  html { font-size: 100%; }
   .banner-container { top: 50%;}
   
   .hamburger.active .bar:nth-child(2) { opacity: 0; }
@@ -687,8 +688,8 @@
 
 /*media query for 640px starts here*/
 @media only screen and (max-width: 640px) {
-  html { font-size: 90%; }
-  .images-list li { flex: 0 0 49%; }
+  html { font-size: 80%; }
+  .images-list li { flex: 0 0 48%; }
   .images-list li:nth-child(2n+1) { margin-left: 0;  }
 
   .blog-section .info { width: 100%; }
@@ -697,8 +698,9 @@
 
 /*media query for 560px starts here*/
 @media only screen and (max-width: 560px) {
-  .our-specialities .wrapper { width: 95%; }
-
+  .our-specialities .wrapper { width: 96%; }
+  .images-list li { flex: 0 0 47%; }
+  .images-list li:nth-child(2n+1) { margin-left: 0;  }
 }
 /*media query for 480px starts here*/
 @media only screen and (max-width: 480px) {
