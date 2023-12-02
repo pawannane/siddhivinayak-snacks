@@ -441,6 +441,13 @@ object-fit:cover;
 aspect-ratio: 3/2;
 } 
 
+.our-specialities,
+.blog-section,
+.footer { 
+  padding-top: 80px;
+  scroll-margin: 110px;
+}
+
 /*======================================
 Our Specialities section styling end
 =======================================*/
@@ -479,9 +486,7 @@ blog styling ends here
 }
 
 .sliders li:nth-child(2),
-.sliders li:nth-child(3) {
-  display: none;
-}
+.sliders li:nth-child(3) { display: none; }
 
 .blog-section figcaption {
   margin-top: 10px;
