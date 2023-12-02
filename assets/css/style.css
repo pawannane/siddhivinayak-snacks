@@ -229,6 +229,7 @@ li {
   --primary-gray: #898989;
   --secondary-gray: #e0e0e0;
   --pure-black: #000;
+  --pure-blue:#5D8ED5;
 }
 
 /*=================================
@@ -437,6 +438,34 @@ height: 100%;
 object-fit:cover;
 aspect-ratio: 3/2;
 } 
+
+.browse-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.browse  { 
+  position: fixed;
+  bottom: 25px;
+  z-index: 1;
+  padding: 12px 1.5rem;
+  border: 2px solid var(--pure-blue);
+  border-radius: 25px;
+  margin-top: 100px;
+  width: 150px;
+  background-color: var(--pure-blue);
+  color: var(--pure-white);
+  font-size: 0.8rem;
+  transition: all .3s ease-in-out;
+  }
+
+  .browse::before {
+    content: '\f2e7';
+    font-family: 'FontAwesome';
+    padding-right: 7%;    
+  }
 /*======================================
 Our Specialities section styling end
 =======================================*/
@@ -597,7 +626,6 @@ footer styling ends here
 @media only screen and (max-width: 1920px) {
 .header .wrapper { width: 95% ;}
 .navbar { width: 68%; }
-
 }
 
 /*media query for hover starts here*/
@@ -609,7 +637,15 @@ footer styling ends here
   border-color: var(--primary-orange);
 }
 
-.call-btn:hover { background-color: var(--pure-white); }
+.call-btn:hover { 
+  background-color: var(--pure-white);
+  color: var(--primary-orange); }
+
+.browse:hover { 
+  color: var(--pure-blue);
+  background-color: var(--pure-white);
+} 
+
 .images-list li:hover { scale:.9 ;} 
 .filter-list li a:hover { color: var(--primary-gray); }
 

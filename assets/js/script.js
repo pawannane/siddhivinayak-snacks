@@ -4,6 +4,7 @@ const hamburger = document.querySelector(".hamburger"),
   html = document.querySelector("html"),
   navItems = document.querySelectorAll(".filter-list li"),
   imageItems = document.querySelectorAll(".images-list li"),
+  loadMoreBtn = document.querySelector('.load'),
   header = document.querySelector(".header");
 
 
@@ -77,6 +78,9 @@ window.addEventListener('load', () => {
   // Attach the 'handleScroll' function to the 'onscroll' event
   window.onscroll = handleScroll;
 
+
+
+  
 })
 
 
