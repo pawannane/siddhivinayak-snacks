@@ -246,13 +246,9 @@ Header styling starts here
   justify-content: space-between;
 }
 
-.logo img {
-  width: 100px;
-}
+.logo img { width: 100px; }
 
-.transition-ease {
-  transition: all 0.3s ease-in-out;
-}
+.transition-ease { transition: all 0.3s ease-in-out; }
 
 .navbar {
   width: 65%;
@@ -314,6 +310,7 @@ Header styling starts here
   background-color: var(--primary-orange);
   color: var(--pure-white);
   font-size: 0.8rem;
+  display: block;
 }
 
 .call-btn::before {
@@ -440,14 +437,6 @@ height: 100%;
 object-fit:cover;
 aspect-ratio: 3/2;
 } 
-
-.our-specialities,
-.blog-section,
-.footer { 
-  padding-top: 80px;
-  scroll-margin: 110px;
-}
-
 /*======================================
 Our Specialities section styling end
 =======================================*/
@@ -652,6 +641,13 @@ footer ul li a:hover {
 .hamburger { 
   display: block; 
   z-index: 2;
+}
+
+.our-specialities,
+.blog-section,
+.footer { 
+  padding-top: 80px;
+  scroll-margin: 110px;
 }
 
 .banner-container { top: 50%;}
