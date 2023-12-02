@@ -26,27 +26,30 @@ window.addEventListener('load', () => {
   });
 
   const filterImage = () => {
-    navItems.forEach((nav) => {
-      nav.addEventListener("click", (e) => {
-        e.preventDefault();
-        const selectedFood = nav.querySelector("a").getAttribute("data-food");
-
-        // Toggle active class on navigation items
-        navItems.forEach((item) => {
-          item.classList.toggle("active-data");
-        });
-
-        // Show/hide images based on selected food type
-        imageItems.forEach((image) => {
-          const foodType = image.getAttribute("data-food-type");
-          image.style.display = (selectedFood === "all" || selectedFood === foodType) ? "block" : "none";
-        });
+    const handleNavigationClick = (e) => {
+      e.preventDefault();
+      
+      const selectedFood = e.currentTarget.querySelector("a").getAttribute("data-food");
+  
+      // Toggle active class on navigation items
+      navItems.forEach((item) => {
+        item.classList.toggle("active-data", item === e.currentTarget);
       });
+  
+      // Show/hide images based on selected food type
+      imageItems.forEach((image) => {
+        const foodType = image.getAttribute("data-food-type");
+        image.style.display = (selectedFood === "all" || selectedFood === foodType) ? "block" : "none";
+      });
+    };
+  
+    // Attach event listeners to navigation items
+    navItems.forEach((nav) => {
+      nav.addEventListener("click", handleNavigationClick);
     });
   };
-
+  
   filterImage();
-
 
   //remove active
   navLink.forEach(e => {

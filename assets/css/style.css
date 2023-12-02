@@ -386,6 +386,7 @@
   text-align: center;
 }
 
+
 .filter-list {
   display: flex;
   justify-content: space-evenly;
@@ -393,16 +394,18 @@
   margin-top: 2rem;
 }
 
-.filter-list li a {
+.filter-list a {
  color: var(--primary-orange);
  font-weight: 600;
  font-size: 1.2rem;
  transition: all .3s ease-in-out;
 }
 
+.active-data a{ color: var(--primary-gray);}
 .foods-main-container { text-align: center; }
 
 .food-lists {
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -412,11 +415,11 @@
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
+  row-gap: 4rem;
+  column-gap: 2%;
 }
 
 .images-list li {
-  margin-top: 4rem;
-  margin-left: 2%; /* Adjust this margin as needed */
   flex: 0 0 calc(23% - 1.5%); /* Adjust the width and margin calculation */
   transition: all .3s ease-in-out;
   cursor: pointer;
@@ -424,12 +427,12 @@
 
 .images-list li figure img { border-radius: 20px; }
 
-.images-list li:nth-child(4n + 1) { margin-left: 0;  }
-
 .images-list li span { 
-  font-weight: 600;
-  display: block;
   margin-top: .6rem;
+  display: block;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .images-list li figure,
@@ -638,10 +641,7 @@
   .navbar { width: 70%; }
   .navbar > ul { gap: 1.8rem; }
   .images-list li { flex: 0 0 30%; }
-  .images-list li span {
-    font-size: 1.1rem;
-}
-  .images-list li:nth-child(4n+1) { margin-left: 2%;  }
+  .images-list li span { font-size: 1.1rem; }
 }  
 
 /*media query for 768px starts here*/
@@ -690,8 +690,6 @@
 @media only screen and (max-width: 640px) {
   html { font-size: 80%; }
   .images-list li { flex: 0 0 48%; }
-  .images-list li:nth-child(2n+1) { margin-left: 0;  }
-
   .blog-section .info { width: 100%; }
 
 } 
@@ -700,7 +698,6 @@
 @media only screen and (max-width: 560px) {
   .our-specialities .wrapper { width: 96%; }
   .images-list li { flex: 0 0 47%; }
-  .images-list li:nth-child(2n+1) { margin-left: 0;  }
   .logo img { width: 70px; }
   .navbar li a::before { font-size: 1.5rem; }
   .our-specialities .wrapper { width: 95%; }
@@ -713,8 +710,6 @@
   }
 
   .images-list li { flex: 0 0 48%; }
-  .images-list li:nth-child(2n+1) { margin-left: 0;  }
-    
   .prev-next { display: none; }
 
   footer .wrapper {
@@ -726,7 +721,6 @@
 
 @media only screen and (max-width: 375px) {
   .images-list li { flex: 0 0 100%; }
-  .images-list li:nth-child(1n+1) { margin-left: 0;  }
 }
 
 @media only screen and (max-width: 320px) {
