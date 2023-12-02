@@ -230,6 +230,7 @@ li {
   --secondary-gray: #e0e0e0;
   --pure-black: #000;
   --pure-blue:#5D8ED5;
+  --pure-green:#25D366;
 }
 
 /*=================================
@@ -373,15 +374,7 @@ color: var(--pure-white);
 font-size: 3.75rem;
 }
 
-.whatsapp-container a {
-  border-radius: 10px;
-  position: fixed;
-  bottom: 20px;
-  right: 25px;
-  font-size: 0;
-  width: 50px;
- z-index: 1;
-}
+
 
 /*======================================
 Our Specialities section styling start
@@ -478,6 +471,31 @@ aspect-ratio: 3/2;
     font-family: 'FontAwesome';
     padding-right: 7%;    
   }
+
+  .whatsapp-container a {
+	  width:60px;
+	  border-radius:50%;
+	  height:60px;
+	  bottom:20px;
+	  right:20px;
+    font-size: 0;
+    position:fixed;
+	  background-color:var(--pure-green);
+	  color:var(--pure-white);
+    text-align: center;
+	  box-shadow: 2px 2px 3px #999;
+    z-index:1;
+  }
+  
+  .whatsapp-container a::after {
+    content: '\f232';
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: 15px;
+    font-size: 35px;
+    top: 12px
+  }
+
 /*======================================
 Our Specialities section styling end
 =======================================*/
@@ -698,16 +716,6 @@ footer ul li a:hover {
   scroll-margin: 110px;
 }
 
-.whatsapp-container a {
-  border-radius: 10px;
-  position: fixed;
-  bottom: 20px;
-  right: 25px;
-  font-size: 0;
-  width: 50px;
- z-index: 1;
-}
-
 .banner-container { top: 50%;}
 
 .hamburger.active .bar:nth-child(2) { opacity: 0; }
@@ -760,7 +768,8 @@ html { font-size: 80%; }
 .logo img { width: 70px; }
 .navbar li a::before { font-size: 1.5rem; }
 .our-specialities .wrapper { width: 95%; }
-.whatsapp-container a { right: 10px; }
+
+.whatsapp-container a { right:10px; }
 }
 /*media query for 480px starts here*/
 @media only screen and (max-width: 480px) {
