@@ -5,7 +5,9 @@ const hamburger = document.querySelector(".hamburger"),
   navItems = document.querySelectorAll(".filter-list li"),
   imageItems = document.querySelectorAll(".images-list li"),
   loadMoreBtn = document.querySelector('.load'),
-  header = document.querySelector(".header");
+  header = document.querySelector(".header"),
+  browse = document.querySelector(".browse"),
+  menuModal = document.querySelector(".menu-modal");
 
 
 window.addEventListener('load', () => {
@@ -78,9 +80,20 @@ window.addEventListener('load', () => {
   // Attach the 'handleScroll' function to the 'onscroll' event
   window.onscroll = handleScroll;
 
+  /************************************ modal logic ***********************************************/
+  // When the user clicks the button, open the modal 
+  browse.onclick = function() {
+    menuModal.style.display = "block";
+    html.classList.add("html-scroll"); // prevent scrolling or user can scroll
+  }
 
-
-  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == menuModal) {
+      menuModal.style.display = "none";
+      html.classList.remove("html-scroll"); // prevent scrolling or user can scroll
+    }
+  }
 })
 
 
