@@ -372,6 +372,17 @@ banner styling starts here
 color: var(--pure-white);
 font-size: 3.75rem;
 }
+
+.whatsapp-container a {
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  font-size: 0;
+  width: 50px;
+ z-index: 1;
+}
+
 /*======================================
 Our Specialities section styling start
 =======================================*/
@@ -444,6 +455,7 @@ aspect-ratio: 3/2;
   justify-content: center;
   align-items: center;
   text-align: center;
+  white-space:nowrap;
 }
 
 .browse  { 
@@ -686,6 +698,16 @@ footer ul li a:hover {
   scroll-margin: 110px;
 }
 
+.whatsapp-container a {
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  font-size: 0;
+  width: 50px;
+ z-index: 1;
+}
+
 .banner-container { top: 50%;}
 
 .hamburger.active .bar:nth-child(2) { opacity: 0; }
@@ -727,6 +749,8 @@ html { font-size: 80%; }
 .images-list li { flex: 0 0 48%; }
 .blog-section .info { width: 100%; }
 
+.browse  { width: 130px; }
+
 } 
 
 /*media query for 560px starts here*/
@@ -736,6 +760,7 @@ html { font-size: 80%; }
 .logo img { width: 70px; }
 .navbar li a::before { font-size: 1.5rem; }
 .our-specialities .wrapper { width: 95%; }
+.whatsapp-container a { right: 10px; }
 }
 /*media query for 480px starts here*/
 @media only screen and (max-width: 480px) {
