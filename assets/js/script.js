@@ -80,7 +80,7 @@ window.addEventListener('load', () => {
   // Attach the 'handleScroll' function to the 'onscroll' event
   window.onscroll = handleScroll;
 
-  /************************************ modal logic ***********************************************/
+  /************************************ menu modal logic ***********************************************/
   // When the user clicks the button, open the modal 
   browse.onclick = function() {
     menuModal.style.display = "block";
@@ -93,54 +93,9 @@ window.addEventListener('load', () => {
       menuModal.style.display = "none";
       html.classList.remove("html-scroll"); // prevent scrolling or user can scroll
     }
-  }
+  }  
+
 })
 
-//remove active
-navLink.forEach(e => {
-  e.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navContainer.classList.remove("active-nav");
-    html.classList.remove("html-scroll"); // remove prevent scrolling or user can scroll
-  })
-});
 
-// slider logic start
-
-let slideIndex = 0;
-
-function plusSlide(n) {
-  showSlides((slideIndex += n));
-}
-
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let slides = document.querySelectorAll('.item');
-  let testBtns = document.querySelectorAll('.test-btns a');
-
-  if (n >= slides.length) {
-    slideIndex = 0;
-  }
-  if (n < 0) {
-    slideIndex = slides.length - 1;
-  }
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
-  slides[slideIndex].style.display = 'flex';
-  // slides[slideIndex].style.width = '100%';
-
-  for (let i = 0; i < testBtns.length; i++) {
-    testBtns[i].classList.remove('active');
-  }
-  testBtns[slideIndex].classList.add('active');
-}
-
-showSlides(slideIndex);
-
-// slider logic end
 
