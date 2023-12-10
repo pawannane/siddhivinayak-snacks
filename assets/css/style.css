@@ -618,15 +618,6 @@
   footer styling ends here
 =================================*/
 
-<<<<<<< HEAD
-  /*media query starts*/
-  /*media query for 1280px starts here*/
-  @media only screen and (max-width: 1280px) {
-    .navbar {
-      width: 70%;
-    }
-  }
-=======
 /*media query starts*/
 /*media query for 1280px starts here*/
 @media only screen and (max-width: 1920px) {
@@ -634,7 +625,6 @@
   .navbar { width: 68%; }
 
 }
->>>>>>> cb40b40e1eee631eed1d4a53bc098897fc40af12
 
   /*media query for hover starts here*/
   @media only screen and (min-width: 995px) {
@@ -677,8 +667,6 @@
       background-color: #ff8e44;
       opacity: 1;
     }
-<<<<<<< HEAD
-=======
 }
 
 /*media query for 995px starts here*/
@@ -695,7 +683,6 @@
   .hamburger { 
     display: block; 
     z-index: 2;
->>>>>>> cb40b40e1eee631eed1d4a53bc098897fc40af12
   }
 
   /*media query for 995px starts here*/
@@ -783,17 +770,6 @@
       font-size: 90%;
     }
 
-<<<<<<< HEAD
-    .images-list li {
-      flex: 0 0 49%;
-    }
-
-    .images-list li:nth-child(2n+1) {
-      margin-left: 0;
-    }
-
-  }
-=======
   .blog-section .info { width: 100%; }
 
 } 
@@ -814,7 +790,6 @@
   .images-list li:nth-child(2n+1) { margin-left: 0;  }
     
   .prev-next { display: none; }
->>>>>>> cb40b40e1eee631eed1d4a53bc098897fc40af12
 
   /*media query for 560px starts here*/
   @media only screen and (max-width: 560px) {
@@ -830,26 +805,6 @@
       margin-left: 0;
     }
   }
-<<<<<<< HEAD
-
-  /*media query for 480px starts here*/
-  @media only screen and (max-width: 480px) {
-    .filter-list li {
-      flex-basis: 50%;
-      margin-bottom: 30px;
-    }
-
-    .prev-next {
-      display: none;
-    }
-
-    footer .wrapper {
-      flex-direction: column;
-      align-items: center;
-    }
-
-  }
-=======
   
 }
 
@@ -857,4 +812,4 @@
   .images-list li { flex: 0 0 100%; }
   .images-list li:nth-child(1n+1) { margin-left: 0;  }
 }
->>>>>>> cb40b40e1eee631eed1d4a53bc098897fc40af12
+}
