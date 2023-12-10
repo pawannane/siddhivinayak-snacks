@@ -175,27 +175,7 @@ sub {
   content: " ";
 }
 
-<<<<<<< HEAD .cf:after {
-  clear: both;
-}
-
-.cf {
-  zoom: 1;
-}
-
 .cf:after {
-  clear: both;
-}
-
-.cf {
-  zoom: 1;
-}
-
-.cf:after {
-  clear: both;
-}
-
-=======.cf:after {
   clear: both;
 }
 
@@ -215,7 +195,27 @@ sub {
   clear: both;
 }
 
->>>>>>>9bab77877babc11dbf3a3fe9ac04eada5eb3e023 .cf {
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
   zoom: 1;
 }
 
@@ -402,7 +402,7 @@ banner styling starts here
   text-align: center;
 }
 
-<<<<<<< HEAD .heading {
+.heading {
   color: var(--pure-white);
   font-size: 3.75rem;
 }
@@ -426,7 +426,7 @@ Our Specialities section styling start
   margin-top: 6rem;
 }
 
-<<<<<<< HEAD .sub-heading {
+.sub-heading {
   font-size: 2.5rem;
   font-weight: 600;
   text-align: center;
@@ -476,7 +476,7 @@ Our Specialities section styling start
   cursor: pointer;
 }
 
-=======.sub-heading {
+.sub-heading {
   font-size: 2.5rem;
   font-weight: 600;
   text-align: center;
@@ -520,11 +520,11 @@ Our Specialities section styling start
   cursor: pointer;
 }
 
->>>>>>>9bab77877babc11dbf3a3fe9ac04eada5eb3e023 .images-list li figure img {
+.images-list li figure img {
   border-radius: 20px;
 }
 
-<<<<<<< HEAD .images-list li span {
+.images-list li span {
   margin-top: .6rem;
   display: block;
   font-weight: 600;
@@ -782,7 +782,7 @@ blog styling ends here
   float: right;
 }
 
-=======.test-btns li a::after {
+.test-btns li a::after {
   content: '';
   width: 12px;
   height: 12px;
