@@ -836,6 +836,11 @@ footer ul li a:hover {
 
 @media only screen and (max-width: 375px) {
   .images-list li { flex: 0 0 100%; }
+  
+  .modal-content { 
+    width: 75%; 
+    height: 80%;
+  }
 }
 
 @media only screen and (max-width: 320px) {
