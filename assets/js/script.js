@@ -96,10 +96,6 @@ window.addEventListener('load', () => {
   }
 })
 
-<<<<<<< HEAD
-
-
-=======
 //remove active
 navLink.forEach(e => {
   e.addEventListener("click", () => {
@@ -147,4 +143,4 @@ function showSlides(n) {
 showSlides(slideIndex);
 
 // slider logic end
->>>>>>> 9bab77877babc11dbf3a3fe9ac04eada5eb3e023
+
