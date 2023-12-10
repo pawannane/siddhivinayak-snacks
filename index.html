@@ -11,13 +11,14 @@
        Remove comments from this tag, when you want to apply media queries to the website. -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
-  <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <!--font-awesome link for icons-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer">
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
   <link rel="stylesheet" media="screen" href="./assets/css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -28,7 +29,7 @@
       <div class="wrapper">
         <div class="header-container">
           <h1 class="logo">
-            <a href="#" title="Home">
+            <a href="#kitchen" title="Home">
               <img src="./assets/images/logo.png" alt="Logo">
             </a>
           </h1>
@@ -40,13 +41,16 @@
               <li><a href="#blog" class="blog transition-ease" title="Blog">Blog</a></li>
               <li><a href="#contact" class="contact transition-ease" title="Contact">Contact</a></li>
             </ul>
-            <a href="tel:+919876543210" class="call-btn transition-ease" title="Call us">+91 9876543210</a>
+              <a href="tel:+9930323953" class="call-btn transition-ease" title="Call us">+91 9930323953</a>
           </nav>
           <ul class="hamburger">
             <li class="bar transition-ease">bar</li>
             <li class="bar transition-ease">bar</li>
             <li class="bar transition-ease">bar</li>
           </ul>
+        </div>
+        <div class="whatsapp-container">
+          <a href="https://wa.me/+919930323953">whatsapp</a>
         </div>
       </div>
     </header>
@@ -62,6 +66,7 @@
           <h2 class="heading">Taste the Extraordinary</h2>
           <p class="info">Where Palate Meets Passion</p>
         </div>
+  
       </section>
       <!--banner section end-->
 
@@ -72,12 +77,12 @@
           <div class="foods-main-container">
             <ul class="filter-list">
               <li class="active-data">
-                <a class="active-filter transition-ease" href="#FIXME" title="All Foods" data-food="all">
+                <a class="transition-ease" href="#FIXME" title="All Foods" data-food="all">
                   All Foods
                 </a>
               </li>
               <li>
-                <a class="transition-ease" href="#FIXME" title="Chinese" data-food="Chinese">Chinese</a>
+                <a class="transition-ease" href="#FIXME" title="Chinese" data-food="chinese">Chinese</a>
               </li>
               <li>
                 <a class="transition-ease" href="#FIXME" title="South Indian" data-food="south">South Indian</a>
@@ -93,7 +98,7 @@
                   <figure>
                     <img src="./assets/images/manchuriyan-chilly.jpg" alt="Chinese">
                   </figure>
-                  <span>Manchuriyan chilly</span>
+                  <span>Manchurian chilly</span>
                 </li>
                 <li data-food-type="south">
                   <figure>
@@ -164,6 +169,79 @@
                 </li>
               </ul>
             </div>
+            <div class="browse-menu">
+              <a href="#FIXME" class="browse">Browse Menu</a>
+            </div>
+            <!-- The Modal -->
+            <div class="menu-modal">
+              <!-- Modal content -->
+              <ul class="modal-content">
+                <li>
+                  <span>Soup</span>
+                  <span class="price">25</span>
+                </li>
+                <li>
+                  <span>Chinese Bhel</span>
+                  <span class="price">15</span>
+                </li>
+                <li>
+                  <span>Manchurian</span>
+                  <span class="price">20</span>
+                </li>
+                <li>
+                  <span>Manchurian Bhel</span>
+                  <span class="price">25</span>
+                </li>
+                <li>
+                  <span>Special Chinese Bhel</span>
+                  <span class="price">40</span>
+                </li>
+                <li>
+                  <span>Manchurian Chilly</span>
+                  <span class="price">50</span>
+                </li>
+                <li>
+                  <span>Soya Chilly</span>
+                  <span class="price">70</span>
+                </li>
+                <li>
+                  <span>Hakka Noodles</span>
+                  <span class="price">50</span>
+                </li>
+                <li>
+                  <span>Fried Rice</span>
+                  <span class="price">50</span>
+                </li>
+                <li>
+                  <span>Tripple Rice</span>
+                  <span class="price">70</span>
+                </li>
+                <li>
+                  <span>Tripple Noodles</span>
+                  <span class="price">75</span>
+                </li>
+                <li>
+                  <span>Combinations Rice</span>
+                  <span class="price">55</span>
+                </li>
+                <li>
+                  <span>1000 Rice</span>
+                  <span class="price">75</span>
+                </li>
+                <li>
+                  <span>Shawarma</span>
+                  <span class="price">60</span>
+                </li>
+                <li>
+                  <span>BBQ Shawarma</span>
+                  <span class="price">75</span>
+                </li>
+                <li>
+                  <span>Peri Peri Shawarma</span>
+                  <span class="price">75</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -171,61 +249,59 @@
       <section class="blog-section" id="blog">
         <div class="wrapper">
           <h4 class="sub-heading">Blog</h4>
-          <div class="slider">
-            <ul class="sliders">
-              <li class="item">
-                <figure>
-                  <img src="/assets/images/hakka-noodles.jpg" alt="user-img" title="Hakka Noodles">
-                  <figcaption>Hakka Noodles</figcaption>
-                </figure>
-                <p class="info">
-                  The aroma of the noodles, especially when combined with fresh vegetables and aromatic spices like
-                  garlic and ginger, can be tantalizing and appetizing.
-                </p>
+          <ul class="sliders">
+            <li>
+              <figure>
+                <img src="./assets/images/hakka-noodles.jpg" alt="user-img" title="Hakka Noodles">
+                <figcaption>Hakka Noodles</figcaption>
+              </figure>
+              <p class="info">
+                The aroma of the noodles, especially when combined with fresh vegetables and aromatic spices like garlic
+                and ginger, can be tantalizing and appetizing.
+              </p>
+            </li>
+            <li>
+              <figure>
+                <img src="./assets/images/peri-peri-shawarma.jpg" alt="user-img" title="Shawarma">
+                <figcaption>Peri Shawarma</figcaption>
+              </figure>
+              <p class="info">
+                When the outer layers of the shawarma are shaved off the rotating spit, they often develop crispy and
+                caramelized edges, adding a delightful texture and flavor contrast to the tenderness.
+              </p>
+            </li>
+            <li>
+              <figure>
+                <img src="./assets/images/fried-rice.jpg" alt="user-img" title="Veg Fried Rice">
+                <figcaption>Veg Fried Rice</figcaption>
+              </figure>
+              <p class="info">
+                Veg fried rice is versatile and can be customized by adding different combinations of vegetables,
+                adjusting the seasoning, or incorporating additional ingredients like tofu or nuts, catering to various
+                taste preferences.
+              </p>
+            </li>
+          </ul>
+          <div class="slider-btns">
+            <ul class="prev-next">
+              <li>
+                <a href="#FIXME" class="prev transition-ease">prev</a>
               </li>
-              <li class="item">
-                <figure>
-                  <img src="/assets/images/peri-peri-shawarma.jpg" alt="user-img" title="Shawarma">
-                  <figcaption>Peri Shawarma</figcaption>
-                </figure>
-                <p class="info">
-                  When the outer layers of the shawarma are shaved off the rotating spit, they often develop crispy and
-                  caramelized edges, adding a delightful texture and flavor contrast to the tenderness.
-                </p>
-              </li>
-              <li class="item">
-                <figure>
-                  <img src="/assets/images/fried-rice.jpg" alt="user-img" title="Veg Fried Rice">
-                  <figcaption>Veg Fried Rice</figcaption>
-                </figure>
-                <p class="info">
-                  Veg fried rice is versatile and can be customized by adding different combinations of vegetables,
-                  adjusting the seasoning, or incorporating additional ingredients like tofu or nuts, catering to
-                  various taste preferences.
-                </p>
+              <li>
+                <a href="#FIXME" class="next transition-ease">next</a>
               </li>
             </ul>
-            <div class="slider-btns">
-              <ul class="prev-next">
-                <li>
-                  <a href="#FIXME" class="prev transition-ease" onclick="plusSlide(-1)">prev</a>
-                </li>
-                <li>
-                  <a href="#FIXME" class="next transition-ease" onclick="plusSlide(1)">next</a>
-                </li>
-              </ul>
-              <ul class="test-btns">
-                <li>
-                  <a href="#FIXME" class="transition-ease" title="Slide 1" onclick="currentSlide(0)">slide</a>
-                </li>
-                <li>
-                  <a href="#FIXME" class="transition-ease" title="Slide 2" onclick="currentSlide(1)">slide</a>
-                </li>
-                <li>
-                  <a href="#FIXME" class="transition-ease" title="Slide 3" onclick="currentSlide(2)">slide</a>
-                </li>
-              </ul>
-            </div>
+            <ul class="test-btns">
+              <li>
+                <a href="#FIXME" class="transition-ease" title="Slide 1">slide</a>
+              </li>
+              <li>
+                <a href="#FIXME" class="transition-ease" title="Slide 2">slide</a>
+              </li>
+              <li>
+                <a href="#FIXME" class="transition-ease" title="Slide 3">slide</a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -237,7 +313,7 @@
     <footer id="contact">
       <div class="wrapper">
         <h6>
-          <a href="#" title="Siddhivinayak Snacks">
+          <a href="#kitchen" title="Siddhivinayak Snacks">
             <img src="./assets/images/logo.png" alt="Logo">
           </a>
         </h6>
@@ -246,13 +322,13 @@
             <h5 class="sub-heading">Menu</h5>
           </li>
           <li class="menu-items">
-            <a href="#FIXME" class="transition-ease info" title="Chinese" target="_self">Chinese</a>
+            <a href="#FIXME" class="transition-ease info" title="Chinese">Chinese</a>
           </li>
           <li class="menu-items">
-            <a href="#FIXME" class="transition-ease info" title="South Indian" target="_self">South Indian</a>
+            <a href="#FIXME" class="transition-ease info" title="South Indian">South Indian</a>
           </li>
           <li class="menu-items">
-            <a href="#FIXME" class="transition-ease info" title="Staple Snacks" target="_self">Staple Snacks</a>
+            <a href="#FIXME" class="transition-ease info" title="Staple Snacks">Staple Snacks</a>
           </li>
         </ul>
         <ul class="social">
@@ -260,7 +336,7 @@
             <h5 class="sub-heading">Social Media</h5>
           </li>
           <li>
-            <a href="https://wa.me/8291226604" class="transition-ease info" title="WhatsApp Us" target="_blank">WhatsApp
+            <a href="https://wa.me/+919930323953" class="transition-ease info" title="WhatsApp Us" target="_blank">WhatsApp
               Us</a>
           </li>
           <li>
@@ -275,7 +351,6 @@
   </div>
   <!--container end-->
   <script src="assets/js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>
