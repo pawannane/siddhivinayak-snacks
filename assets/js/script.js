@@ -100,10 +100,10 @@ window.addEventListener('load', () => {
  $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
-        margin: 65,
+        margin: 30,
         responsiveClass: true,
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 2200,
         autoplayHoverPause: true,
         responsive: {
             0: {
@@ -117,7 +117,7 @@ window.addEventListener('load', () => {
                 loop: true
             },
             1000: {
-                items: 2,
+                items: 3,
                 nav: true,
                 loop: true
             }
