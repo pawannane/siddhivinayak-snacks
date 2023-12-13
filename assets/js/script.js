@@ -95,43 +95,74 @@ window.addEventListener('load', () => {
     }
   }  
 
+
+
+ $(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 65,
+        responsiveClass: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true,
+                loop: true
+            },
+            600: {
+                items: 1,
+                nav: true,
+                loop: true
+            },
+            1000: {
+                items: 2,
+                nav: true,
+                loop: true
+            }
+        }
+    })
+})
+
 })
 
 // slider logic start
-let slideIndex = 0;
+// let slideIndex = 0;
 
-function plusSlide(n) {
-  showSlides((slideIndex += n));
-}
+// function plusSlide(n) {
+//   showSlides((slideIndex += n));
+// }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+// function currentSlide(n) {
+//   showSlides((slideIndex = n));
+// }
 
-function showSlides(n) {
-  let slides = document.querySelectorAll('.item');
-  let testBtns = document.querySelectorAll('.test-btns a');
+// function showSlides(n) {
+//   let slides = document.querySelectorAll('.item');
+//   let testBtns = document.querySelectorAll('.test-btns a');
 
-  if (n >= slides.length) {
-    slideIndex = 0;
-  }
-  if (n < 0) {
-    slideIndex = slides.length - 1;
-  }
+//   if (n >= slides.length) {
+//     slideIndex = 0;
+//   }
+//   if (n < 0) {
+//     slideIndex = slides.length - 1;
+//   }
 
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
-  slides[slideIndex].style.display = 'flex';
-  // slides[slideIndex].style.width = '100%';
+//   for (let i = 0; i < slides.length; i++) {
+//     slides[i].style.display = 'none';
+//   }
+//   slides[slideIndex].style.display = 'flex';
+//   // slides[slideIndex].style.width = '100%';
 
-  for (let i = 0; i < testBtns.length; i++) {
-    testBtns[i].classList.remove('active');
-  }
-  testBtns[slideIndex].classList.add('active');
-}
+//   for (let i = 0; i < testBtns.length; i++) {
+//     testBtns[i].classList.remove('active');
+//   }
+//   testBtns[slideIndex].classList.add('active');
+// }
 
-showSlides(slideIndex);
+// showSlides(slideIndex);
 
 // slider logic end
+
 
