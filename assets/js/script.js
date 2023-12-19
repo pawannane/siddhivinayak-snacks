@@ -31,27 +31,27 @@ window.addEventListener('load', () => {
   const filterImage = () => {
     const handleNavigationClick = (e) => {
       e.preventDefault();
-      
+
       const selectedFood = e.currentTarget.querySelector("a").getAttribute("data-food");
-  
+
       // Toggle active class on navigation items
       navItems.forEach((item) => {
         item.classList.toggle("active-data", item === e.currentTarget);
       });
-  
+
       // Show/hide images based on selected food type
       imageItems.forEach((image) => {
         const foodType = image.getAttribute("data-food-type");
         image.style.display = (selectedFood === "all" || selectedFood === foodType) ? "block" : "none";
       });
     };
-  
+
     // Attach event listeners to navigation items
     navItems.forEach((nav) => {
       nav.addEventListener("click", handleNavigationClick);
     });
   };
-  
+
   filterImage();
 
   //remove active
@@ -82,48 +82,46 @@ window.addEventListener('load', () => {
 
   /************************************ menu modal logic ***********************************************/
   // When the user clicks the button, open the modal 
-  browse.onclick = function() {
+  browse.onclick = function () {
     menuModal.style.display = "block";
     html.classList.add("html-scroll"); // prevent scrolling or user can scroll
   }
 
   // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
+  window.onclick = function (event) {
     if (event.target == menuModal) {
       menuModal.style.display = "none";
       html.classList.remove("html-scroll"); // prevent scrolling or user can scroll
     }
-  }  
+  }
 
-
-
- $(document).ready(function () {
+  $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 30,
-        responsiveClass: true,
-        autoplay: true,
-        autoplayTimeout: 2200,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: true,
-                loop: true
-            },
-            600: {
-                items: 1,
-                nav: true,
-                loop: true
-            },
-            1000: {
-                items: 3,
-                nav: true,
-                loop: true
-            }
+      loop: true,
+      margin: 30,
+      responsiveClass: true,
+      autoplay: true,
+      autoplayTimeout: 2200,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true,
+          loop: true
+        },
+        600: {
+          items: 1,
+          nav: true,
+          loop: true
+        },
+        1000: {
+          items: 3,
+          nav: true,
+          loop: true
         }
+      }
     })
-})
+  })
 
 })
 
