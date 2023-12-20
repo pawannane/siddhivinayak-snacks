@@ -694,7 +694,7 @@ footer h6 {
   padding: 18px 54px;
   border: 2px solid var(--primary-orange);
   background-color: var(--secondary-orange);
-  border-radius: 2px;
+  border-radius: 25px;
   color: #fff;
   text-transform: uppercase;
   white-space: nowrap;
@@ -767,7 +767,7 @@ footer styling ends here
 
   .call-btn:hover,
   .address-btn a:hover,
-  .contact-btn a:hover  {
+  .contact-btn a:hover {
     background-color: var(--pure-white);
     color: var(--primary-orange);
   }
