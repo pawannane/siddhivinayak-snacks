@@ -691,12 +691,14 @@ footer h6 {
 
 .contact-btn a,
 .address-btn a {
-  background-color: var(--secondary-orange);
   padding: 18px 54px;
+  border: 2px solid var(--primary-orange);
+  background-color: var(--secondary-orange);
   border-radius: 2px;
   color: #fff;
   text-transform: uppercase;
   white-space: nowrap;
+  transition: all .3s ease-in-out;
 }
 
 .address-btn a {
@@ -763,7 +765,9 @@ footer styling ends here
     border-color: var(--primary-orange);
   }
 
-  .call-btn:hover {
+  .call-btn:hover,
+  .address-btn a:hover,
+  .contact-btn a:hover  {
     background-color: var(--pure-white);
     color: var(--primary-orange);
   }
