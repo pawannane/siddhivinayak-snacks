@@ -495,6 +495,12 @@ Our Specialities section styling start
   padding-right: 7%;
 }
 
+.hide-browse { 
+  opacity: 0;
+  transition: all .1s ease-in-out;
+  z-index: 0;
+}
+
 .whatsapp-container a {
   width: 60px;
   border-radius: 50%;
@@ -522,28 +528,22 @@ Our Specialities section styling start
 /* The Modal (background) */
 .menu-modal {
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   padding-top: 10%;
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 10;
-  /* Sit on top */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
   width: 50%;
   height: 85%;
-  padding: 25px 4%;
+  padding: 20px 4%;
   border-radius: 10px;
   margin: auto;
   background-color: var(--pure-white);
@@ -551,7 +551,7 @@ Our Specialities section styling start
 }
 
 .modal-content>li {
-  margin-bottom: 33px;
+  margin-bottom: 26px;
   display: flex;
   justify-content: space-between;
 }

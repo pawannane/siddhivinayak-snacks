@@ -4,12 +4,9 @@ const hamburger = document.querySelector(".hamburger"),
   html = document.querySelector("html"),
   navItems = document.querySelectorAll(".filter-list li"),
   imageItems = document.querySelectorAll(".images-list li"),
-  loadMoreBtn = document.querySelector('.load'),
   header = document.querySelector(".header"),
   browse = document.querySelector(".browse"),
-  menuModal = document.querySelector(".menu-modal"),
-  subHeading = document.querySelectorAll('.sub-heading'),
-  socials = document.querySelectorAll('.social');
+  menuModal = document.querySelector(".menu-modal");
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,6 +17,7 @@ window.addEventListener('load', () => {
     hamburger.classList.toggle("active");
     navContainer.classList.toggle("active-nav");
     html.classList.toggle("html-scroll"); // prevent scrolling
+    browse.classList.toggle('hide-browse');
   })
 
   //remove active
@@ -28,6 +26,7 @@ window.addEventListener('load', () => {
       hamburger.classList.remove("active");
       navContainer.classList.remove("active-nav");
       html.classList.remove("html-scroll"); // remove prevent scrolling or user can scroll
+      browse.classList.remove('hide-browse');
     })
   });
 
@@ -78,14 +77,14 @@ window.addEventListener('load', () => {
   /************************************ menu modal logic ***********************************************/
   // When the user clicks the button, open the modal 
   browse.onclick = function () {
-    gsap.to(menuModal, { duration: 0.5, opacity: 1, display: "block", ease: "power2.inOut" });
+    gsap.to(menuModal, { duration: 0.2, opacity: 1, display: "block", ease: "power2.inOut" });
     html.classList.add("html-scroll");
   };
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
     if (event.target == menuModal) {
-      gsap.to(menuModal, { duration: 0.5, opacity: 0, display: "none", ease: "power2.inOut" });
+      gsap.to(menuModal, { duration: 0.2, opacity: 0, display: "none", ease: "power2.inOut" });
       html.classList.remove("html-scroll");
     }
   }
