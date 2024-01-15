@@ -477,7 +477,7 @@ Our Specialities section styling start
 .browse {
   position: fixed;
   bottom: 25px;
-  z-index: 10;
+  z-index: 6;
   padding: 12px 1.5rem;
   border: 2px solid var(--pure-blue);
   border-radius: 25px;
@@ -667,21 +667,10 @@ footer .wrapper {
   text-align: center;
 }
 
-iframe {
-  width: 62.5rem;
-  height: 40.5rem;
-}
-
-.line {
-  width: 50px;
-  border: 1px solid black;
-  margin: 0 auto 16px;
-}
-
 footer h6 {
   margin-bottom: 50px;
-  font-family: "Lora", serif;
   font-weight: 700;
+  font-size: 2.25rem;
   text-transform: uppercase;
 }
 
@@ -733,19 +722,29 @@ footer styling ends here
     width: 95%;
   }
 
-  .navbar {
-    width: 68%;
-  }
-}
-
-@media only screen and (max-width: 1240px) {
-  footer .wrapper {
-    width: auto;
+  .map {
+    display: flex;
+    justify-content: center;
   }
 
   iframe {
-    width: 900px;
-    height: 700px;
+    width: 1000px;
+    height: 600px;
+  }
+
+}
+
+@media only screen and (max-width: 1366px) {
+  .navbar {
+    width: 65%;
+  }
+
+
+}
+
+@media only screen and (max-width: 1280px) {
+  .navbar {
+    width: 67%;
   }
 
   .social {
@@ -793,6 +792,9 @@ footer styling ends here
   .owl-theme .owl-nav [class*=owl-]:hover {
     color: var(--primary-gray);
   }
+
+
+
 }
 
 /* /media query for 995px starts here/ */
@@ -823,7 +825,6 @@ footer styling ends here
   }
 
   iframe {
-    width: 700px;
     height: 500px;
   }
 
@@ -898,9 +899,11 @@ footer styling ends here
   }
 
   iframe {
-    width: 400px;
-    height: 200px;
+    width: 500px;
+    height: 300px;
   }
+
+
 }
 
 /* /media query for 640px starts here/ */
@@ -956,10 +959,7 @@ footer styling ends here
     right: 10px;
   }
 
-  iframe {
-    width: 400px;
-    height: 200px;
-  }
+
 }
 
 /* /media query for 480px starts here/ */
@@ -983,7 +983,7 @@ footer styling ends here
   }
 
   iframe {
-    width: 350px;
+    width: 500px;
     height: 200px;
   }
 }
@@ -998,10 +998,7 @@ footer styling ends here
     height: 80%;
   }
 
-  iframe {
-    width: 300px;
-    height: 200px;
-  }
+
 
   .social li {
     padding: 0 20px 0;
