@@ -8,7 +8,6 @@ const hamburger = document.querySelector(".hamburger"),
   browse = document.querySelector(".browse"),
   menuModal = document.querySelector(".menu-modal");
 
-gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener('load', () => {
   /************************************ Hamburger logic ***********************************************/
@@ -116,7 +115,5 @@ window.addEventListener('load', () => {
       }
     })
   })
-
-
 })
 
