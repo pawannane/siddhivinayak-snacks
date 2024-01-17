@@ -495,7 +495,7 @@ Our Specialities section styling start
   padding-right: 7%;
 }
 
-.hide-browse { 
+.hide-browse {
   opacity: 0;
   transition: all .1s ease-in-out;
   z-index: 0;
@@ -658,7 +658,6 @@ footer styling starts here
 
 footer .wrapper {
   max-width: 1096px;
-  width: 71.35%;
   padding-bottom: 150px;
 }
 
@@ -708,7 +707,7 @@ footer h6 {
 footer h5 {
   margin: 0 0 24px;
   font-weight: bold;
-  line-height: 1em;
+  line-height: 1rem;
 }
 
 /*=================================
@@ -738,8 +737,6 @@ footer styling ends here
   .navbar {
     width: 65%;
   }
-
-
 }
 
 @media only screen and (max-width: 1280px) {
@@ -752,6 +749,22 @@ footer styling ends here
     margin: auto;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .navbar {
+    width: 71%;
+  }
+
+  .contact-btn a,
+  .address-btn a {
+    padding: 16px 42px;
+  }
+
+  footer h5 {
+    text-align: center;
+  }
+}
+
 
 /* /media query for hover starts here/ */
 @media only screen and (min-width: 995px) {
@@ -792,16 +805,14 @@ footer styling ends here
   .owl-theme .owl-nav [class*=owl-]:hover {
     color: var(--primary-gray);
   }
-
-
-
 }
 
 /* /media query for 995px starts here/ */
 @media only screen and (max-width: 995px) {
   .navbar {
-    width: 70%;
+    width: 72.80%;
   }
+
 
   .navbar>ul {
     gap: 1.8rem;
